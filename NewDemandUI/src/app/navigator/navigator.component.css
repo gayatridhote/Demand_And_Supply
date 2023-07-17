@@ -1,0 +1,16 @@
+.mat-toolbar.mat-primary {
+    background: #4646e0;
+    color: #071620;
+  }
+
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+  .ufb-logo-module--logo--1jaPq {
+    max-width: 10rem;
+    max-height: 2.4rem;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}

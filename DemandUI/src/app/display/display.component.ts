@@ -15,7 +15,7 @@ export class DisplayComponent implements OnInit {
 
 
   constructor( private http : HttpClient) {}
-
+  
   ngOnInit(): void{
    this.http.get('http://localhost:5104/DandSApi/DisplayForAdmin/GetAll').subscribe({
     next: response => this.user = response,

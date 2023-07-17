@@ -1,0 +1,522 @@
+<mat-card>
+    <mat-card-header>
+        <!--<div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" ng-model="source">
+            <label class="form-check-label">Source</label>
+        </div> 
+
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" ng-model="demandStatus">
+            <label class="form-check-label">Demand Status</label>
+        </div>-->
+    </mat-card-header>
+
+    <mat-card-content>
+        <div>
+            <div class="table-container ">
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+                    <ng-container matColumnDef="source" >
+                        <th mat-header-cell  *matHeaderCellDef >Source</th>
+                        <td mat-cell  *matCellDef="let user">{{ user.source}}</td>
+                    </ng-container>
+
+                    <ng-container  matColumnDef="demandStatus" >
+                        <th mat-header-cell  *matHeaderCellDef >Demand Status</th>
+                        <td mat-cell  *matCellDef="let user">{{ user.demandStatus}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="teamRequestId">
+                        <th mat-header-cell *matHeaderCellDef>Team Request Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.teamRequestId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="positionId">
+                        <th mat-header-cell *matHeaderCellDef>Position Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.positionId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="recruitingId">
+                        <th mat-header-cell *matHeaderCellDef>Recruiting Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.recruitingId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="bUOfAccount">
+                        <th mat-header-cell *matHeaderCellDef>BU Of Account</th>
+                        <td mat-cell *matCellDef="let user">{{ user.buOfAccount}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="subSector">
+                        <th mat-header-cell *matHeaderCellDef>Sub Sector</th>
+                        <td mat-cell *matCellDef="let user">{{ user.subSector}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="microSector">
+                        <th mat-header-cell *matHeaderCellDef>Micro Sector</th>
+                        <td mat-cell *matCellDef="let user">{{ user.microSector}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="client">
+                        <th mat-header-cell *matHeaderCellDef>Client</th>
+                        <td mat-cell *matCellDef="let user">{{ user.client}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="demandType">
+                        <th mat-header-cell *matHeaderCellDef>Demand Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.demandType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="projectCode">
+                        <th mat-header-cell *matHeaderCellDef>Project Code</th>
+                        <td mat-cell *matCellDef="let user">{{ user.projectCode}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="jobName">
+                        <th mat-header-cell *matHeaderCellDef>Job Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.jobName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="positionName">
+                        <th mat-header-cell *matHeaderCellDef>Position Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.positionName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="teamRequestName">
+                        <th mat-header-cell *matHeaderCellDef>Team Request Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.teamRequestName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="localGrade">
+                        <th mat-header-cell *matHeaderCellDef>Local Grade</th>
+                        <td mat-cell *matCellDef="let user">{{ user.localGrade}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="globalGrade">
+                        <th mat-header-cell *matHeaderCellDef>Global Grade</th>
+                        <td mat-cell *matCellDef="let user">{{ user.globalGrade}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="roleNotes">
+                        <th mat-header-cell *matHeaderCellDef>Role Notes</th>
+                        <td mat-cell *matCellDef="let user"><!--{{ user.roleNotes}}--></td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="roleType">
+                        <th mat-header-cell *matHeaderCellDef>Role Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.roleType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="backFillReason">
+                        <th mat-header-cell *matHeaderCellDef>Back Fill Reason</th>
+                        <td mat-cell *matCellDef="let user">{{ user.backFillReason}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="outgoingEmployee">
+                        <th mat-header-cell *matHeaderCellDef>Outgoing Employee</th>
+                        <td mat-cell *matCellDef="let user">{{ user.outgoingEmployee}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="roleStartDate">
+                        <th mat-header-cell *matHeaderCellDef>Role Start Date</th>
+                        <td mat-cell *matCellDef="let user">{{ user.roleStartDate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="roleEndDate">
+                        <th mat-header-cell *matHeaderCellDef>Role End Date</th>
+                        <td mat-cell *matCellDef="let user">{{ user.roleEndDate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="fulfillmentChannelFinal">
+                        <th mat-header-cell *matHeaderCellDef>Fulfillment Channel Final</th>
+                        <td mat-cell *matCellDef="let user">{{ user.fulfillmentChannelFinal}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="demandFulfillmentStatus">
+                        <th mat-header-cell *matHeaderCellDef>Demand Fulfillment Status</th>
+                        <td mat-cell *matCellDef="let user">{{ user.demandFulfillmentStatus}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="additionalNotes">
+                        <th mat-header-cell *matHeaderCellDef>Additional Notes</th>
+                        <td mat-cell *matCellDef="let user">{{ user.additionalNotes}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="bUOfSkill">
+                        <th mat-header-cell *matHeaderCellDef>BU Of Skill</th>
+                        <td mat-cell *matCellDef="let user">{{ user.buOfSkill}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="practice">
+                        <th mat-header-cell *matHeaderCellDef> Practice</th>
+                        <td mat-cell *matCellDef="let user">{{ user.practice}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="globalPractice">
+                        <th mat-header-cell *matHeaderCellDef> Global Practice</th>
+                        <td mat-cell *matCellDef="let user">{{ user.globalPractice}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="fte">
+                        <th mat-header-cell *matHeaderCellDef> Fte</th>
+                        <td mat-cell *matCellDef="let user">{{ user.fte}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="countryOfDeliveryPrimary">
+                        <th mat-header-cell *matHeaderCellDef> Country Of Delivery Primary</th>
+                        <td mat-cell *matCellDef="let user">{{ user.countryOfDeliveryPrimary}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="creationDate">
+                        <th mat-header-cell *matHeaderCellDef> Creation Date</th>
+                        <td mat-cell *matCellDef="let user">{{ user.creationDate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="updatedOn">
+                        <th mat-header-cell *matHeaderCellDef> Updated On</th>
+                        <td mat-cell *matCellDef="let user">{{ user.updatedOn}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="weekByStatus">
+                        <th mat-header-cell *matHeaderCellDef>Week By Status</th>
+                        <td mat-cell *matCellDef="let user">{{ user.weekByStatus}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="leadtimeInDays">
+                        <th mat-header-cell *matHeaderCellDef>Leadtime In Days</th>
+                        <td mat-cell *matCellDef="let user">{{ user.leadtimeInDays}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="ageing">
+                        <th mat-header-cell *matHeaderCellDef>Ageing</th>
+                        <td mat-cell *matCellDef="let user">{{ user.ageing}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="requestUpdater">
+                        <th mat-header-cell *matHeaderCellDef>Request Updater</th>
+                        <td mat-cell *matCellDef="let user">{{ user.requestUpdater}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="teamRequestComment2">
+                        <th mat-header-cell *matHeaderCellDef>Team Request Comment 2</th>
+                        <td mat-cell *matCellDef="let user">{{ user.teamRequestComment2}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="buspHandler">
+                        <th mat-header-cell *matHeaderCellDef>Busp Handler</th>
+                        <td mat-cell *matCellDef="let user">{{ user.buspHandler}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="pspHandler">
+                        <th mat-header-cell *matHeaderCellDef>Psp Handler</th>
+                        <td mat-cell *matCellDef="let user">{{ user.pspHandler}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="recruiter">
+                        <th mat-header-cell *matHeaderCellDef>Recruiter</th>
+                        <td mat-cell *matCellDef="let user">{{ user.recruiter}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="deliveryRole">
+                        <th mat-header-cell *matHeaderCellDef>Delivery Role</th>
+                        <td mat-cell *matCellDef="let user">{{ user.deliveryRole}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="deliverySkills">
+                        <th mat-header-cell *matHeaderCellDef>Delivery Skills</th>
+                        <td mat-cell *matCellDef="let user">{{ user.deliverySkills}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="requestedBy">
+                        <th mat-header-cell *matHeaderCellDef>Requested By</th>
+                        <td mat-cell *matCellDef="let user">{{ user.requestedBy}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="clientReference">
+                        <th mat-header-cell *matHeaderCellDef>Client Reference</th>
+                        <td mat-cell *matCellDef="let user">{{ user.clientReference}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="expectedDailyRate">
+                        <th mat-header-cell *matHeaderCellDef>Expected Daily Rate</th>
+                        <td mat-cell *matCellDef="let user">{{ user.expectedDailyRate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="roleComment1">
+                        <th mat-header-cell *matHeaderCellDef>Role Comment 1</th>
+                        <td mat-cell *matCellDef="let user">{{ user.roleComment1}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="deliveryType">
+                        <th mat-header-cell *matHeaderCellDef>Delivery Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.deliveryType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryLocationName">
+                        <th mat-header-cell *matHeaderCellDef>Primary Location Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryLocationName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="locationDescription">
+                        <th mat-header-cell *matHeaderCellDef>Location Description</th>
+                        <td mat-cell *matCellDef="let user">{{ user.locationDescription}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryCity">
+                        <th mat-header-cell *matHeaderCellDef>Primary City</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryCity}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryState">
+                        <th mat-header-cell *matHeaderCellDef>Primary State</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryState}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryZipCode">
+                        <th mat-header-cell *matHeaderCellDef>Primary Zip Code</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryZipCode}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryRegion">
+                        <th mat-header-cell *matHeaderCellDef>Primary Region</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryRegion}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryGeoName">
+                        <th mat-header-cell *matHeaderCellDef>Primary Geo Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryGeoName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="primaryGeoCity">
+                        <th mat-header-cell *matHeaderCellDef>Primary Geo City</th>
+                        <td mat-cell *matCellDef="let user">{{ user.primaryGeoCity}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="closestGeoHub">
+                        <th mat-header-cell *matHeaderCellDef>Closest Geo Hub</th>
+                        <td mat-cell *matCellDef="let user">{{ user.closestGeoHub}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="hubSpoke">
+                        <th mat-header-cell *matHeaderCellDef>Hub Spoke</th>
+                        <td mat-cell *matCellDef="let user">{{ user.hubSpoke}}</td>
+                    </ng-container>
+
+
+                    <ng-container matColumnDef="productionUnit">
+                        <th mat-header-cell *matHeaderCellDef> Production Unit</th>
+                        <td mat-cell *matCellDef="let user">{{ user.productionUnit}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="productionUnitName">
+                        <th mat-header-cell *matHeaderCellDef>Production Unit Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.productionUnitName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="targetBillRate">
+                        <th mat-header-cell *matHeaderCellDef>Target Bill Rate</th>
+                        <td mat-cell *matCellDef="let user">{{ user.targetBillRate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sellingBU">
+                        <th mat-header-cell *matHeaderCellDef>Selling BU</th>
+                        <td mat-cell *matCellDef="let user">{{ user.sellingBu}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="taleoLocationRequisitionLocation">
+                        <th mat-header-cell *matHeaderCellDef>Taleo Location Requisition Location</th>
+                        <td mat-cell *matCellDef="let user">{{ user.taleoLocationRequisitionLocation}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="taleoLocationDemandGeo">
+                        <th mat-header-cell *matHeaderCellDef>Taleo Location Demand Geo</th>
+                        <td mat-cell *matCellDef="let user">{{ user.taleoLocationDemandGeo}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="taleoLocationClientLocation">
+                        <th mat-header-cell *matHeaderCellDef>Taleo Location Client Location</th>
+                        <td mat-cell *matCellDef="let user">{{ user.taleoLocationClientLocation}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="accountRegion">
+                        <th mat-header-cell *matHeaderCellDef>Account Region</th>
+                        <td mat-cell *matCellDef="let user">{{ user.accountRegion}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="accountGeoName">
+                        <th mat-header-cell *matHeaderCellDef>Account Geo Name</th>
+                        <td mat-cell *matCellDef="let user">{{ user.accountGeoName}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="accountGeoCity">
+                        <th mat-header-cell *matHeaderCellDef>Account Geo City</th>
+                        <td mat-cell *matCellDef="let user">{{ user.accountGeoCity}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorStage">
+                        <th mat-header-cell *matHeaderCellDef>Thor Stage</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorStage}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="headCountType">
+                        <th mat-header-cell *matHeaderCellDef>Head Count Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.headCountType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="s2rManaged">
+                        <th mat-header-cell *matHeaderCellDef>S2r Managed</th>
+                        <td mat-cell *matCellDef="let user">{{ user.s2rManaged}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="taskLabel">
+                        <th mat-header-cell *matHeaderCellDef>Task Label</th>
+                        <td mat-cell *matCellDef="let user">{{ user.taskLabel}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="s2rId">
+                        <th mat-header-cell *matHeaderCellDef>S2r Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.s2rId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="s2rCaseId">
+                        <th mat-header-cell *matHeaderCellDef> S2r Case Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.s2rCaseId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="candidateCount">
+                        <th mat-header-cell *matHeaderCellDef> Candidate Count</th>
+                        <td mat-cell *matCellDef="let user">{{ user.candidateCount}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="assignedTo">
+                        <th mat-header-cell *matHeaderCellDef> Assigned To</th>
+                        <td mat-cell *matCellDef="let user">{{ user.assignedTo}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="teamRequestStatus">
+                        <th mat-header-cell *matHeaderCellDef> Team Request Status</th>
+                        <td mat-cell *matCellDef="let user">{{ user.teamRequestStatus}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorOptyId">
+                        <th mat-header-cell *matHeaderCellDef> Thor Opty Id</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorOptyId}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorContractType">
+                        <th mat-header-cell *matHeaderCellDef> Thor Contract Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorContractType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorProbability">
+                        <th mat-header-cell *matHeaderCellDef> Thor Probability</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorProbability}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorCloseDate">
+                        <th mat-header-cell *matHeaderCellDef> Thor Close Date</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorCloseDate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="thorStartDate">
+                        <th mat-header-cell *matHeaderCellDef>Thor Start Date</th>
+                        <td mat-cell *matCellDef="let user">{{ user.thorStartDate}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="marketUnitBU">
+                        <th mat-header-cell *matHeaderCellDef>Market Unit BU</th>
+                        <td mat-cell *matCellDef="let user">{{ user.marketUnitBu}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="requestCreator">
+                        <th mat-header-cell *matHeaderCellDef> Request Creator</th>
+                        <td mat-cell *matCellDef="let user">{{ user.requestCreator}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="leadMarketArea">
+                        <th mat-header-cell *matHeaderCellDef> Lead Market Area</th>
+                        <td mat-cell *matCellDef="let user">{{ user.leadMarketArea}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="leadPracticeArea">
+                        <th mat-header-cell *matHeaderCellDef> Lead Practice Area</th>
+                        <td mat-cell *matCellDef="let user">{{ user.leadPracticeArea}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="sourceOfDemand">
+                        <th mat-header-cell *matHeaderCellDef> Source Of Demand</th>
+                        <td mat-cell *matCellDef="let user">{{ user.sourceOfDemand}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="agedPastDueYN">
+                        <th mat-header-cell *matHeaderCellDef> Aged Past Due YN</th>
+                        <td mat-cell *matCellDef="let user">{{ user.agedPastDueYN}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="weekByStatusGrouped">
+                        <th mat-header-cell *matHeaderCellDef> Week By Status Grouped</th>
+                        <td mat-cell *matCellDef="let user">{{ user.weekByStatusGrouped}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="durationInAgedPastStatus">
+                        <th mat-header-cell *matHeaderCellDef> Duration In Aged Past Status</th>
+                        <td mat-cell *matCellDef="let user">{{ user.durationInAgedPastStatus}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="daysSincePastDue">
+                        <th mat-header-cell *matHeaderCellDef>Days Since Past Due</th>
+                        <td mat-cell *matCellDef="let user">{{ user.daysSincePastDue}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="noOfSelfAppliedApplications">
+                        <th mat-header-cell *matHeaderCellDef> No Of Self Applied Applications</th>
+                        <td mat-cell *matCellDef="let user">{{ user.noOfSelfAppliedApplications}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="visible">
+                        <th mat-header-cell *matHeaderCellDef> Visible</th>
+                        <td mat-cell *matCellDef="let user">{{ user.visible}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="isClientInterviewRequired">
+                        <th mat-header-cell *matHeaderCellDef> Is Client Interview Required</th>
+                        <td mat-cell *matCellDef="let user">{{ user.isClientInterviewRequired}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="excludeOffshoreDcxID">
+                        <th mat-header-cell *matHeaderCellDef> Exclude Offshore Dcx ID</th>
+                        <td mat-cell *matCellDef="let user">{{ user.excludeOffshoreDcxID}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="leadMarketAndPracticeAreaSame">
+                        <th mat-header-cell *matHeaderCellDef> Lead Market And Practice Area Same</th>
+                        <td mat-cell *matCellDef="let user">{{ user.leadMarketAndPracticeAreaSame}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="forecastType">
+                        <th mat-header-cell *matHeaderCellDef> Forecast Type</th>
+                        <td mat-cell *matCellDef="let user">{{ user.forecastType}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="action" stickyEnd>
+                        <th mat-header-cell *matHeaderCellDef>Action</th>
+                        <td mat-cell *matCellDef="let user">
+                            <button mat-raised-button color="primary">Apply</button>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayColumns; sticky:true"></tr>
+                    <tr mat-row *matRowDef="let user; columns : displayColumns "></tr>
+
+                </table>
+            </div>
+            <mat-card-footer>
+                <mat-paginator class="mat-elevation-z8" [pageSize]="10" [pageSizeOptions]="[ 10, 20, 30, 40, 50]"
+                    aria-label="Select page">
+                </mat-paginator>
+            </mat-card-footer>
+        </div>
+
+    </mat-card-content>
+</mat-card>
