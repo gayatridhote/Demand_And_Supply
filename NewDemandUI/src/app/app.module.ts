@@ -14,15 +14,28 @@ import {MatIconModule} from '@angular/material/icon';
 import { UserDisplayComponent } from './user-display/user-display.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
-import {MatChipsModule} from '@angular/material/chips';
+import {MatChipInputEvent, MatChipsModule} from '@angular/material/chips';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { HideShowColmComponent } from './hide-show-colm/hide-show-colm.component';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { NgFor } from '@angular/common';
+import {MatAutocompleteSelectedEvent, MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ApplyHereComponent } from './apply-here/apply-here.component';
+import { ReusableTableComponent } from './reusable-table/reusable-table.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigatorComponent,
-    UserDisplayComponent
+    UserDisplayComponent,
+    HideShowColmComponent,
+    ApplyHereComponent,
+    ReusableTableComponent,
+    
    
   ],
   imports: [
@@ -39,7 +52,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatChipsModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
+    NgFor,
+    MatAutocompleteModule,
+    MatDialogModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatExpansionModule
     
   ],
   providers: [],

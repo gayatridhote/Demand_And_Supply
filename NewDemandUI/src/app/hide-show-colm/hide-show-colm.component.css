@@ -1,0 +1,17 @@
+.select_columns{
+    width: 100%;
+  }
+  .example-section {
+    background-color: black;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+  .h4{
+    color: rgb(241, 246, 250);
+  }

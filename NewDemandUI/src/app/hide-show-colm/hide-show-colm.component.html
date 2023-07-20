@@ -1,0 +1,70 @@
+<!--<h4>Select your toppings:</h4>
+<section class="example-section">
+
+    <p><mat-checkbox [checked]="pepperoni" [(ngModel)]="pepperoni">Pepperoni</mat-checkbox></p>
+    <p><mat-checkbox [checked]="extracheese" [(ngModel)]="extracheese">Extra Cheese</mat-checkbox></p>
+    <p><mat-checkbox [checked]="mushroom" [(ngModel)]="mushroom">Mushroom</mat-checkbox></p>
+
+
+</section>
+
+<p [hidden]="!pepperoni">Pepperoni </p>
+<p [hidden]="!extracheese">Extra Cheese </p>
+<p [hidden]="!mushroom">Mushroom </p>
+
+<mat-form-field>
+    <mat-label>Toppings</mat-label>
+    <mat-select [formControl]="toppings" multiple>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Self aware panel
+        </mat-panel-title>
+        <mat-panel-description>
+            Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <h4>Select your toppings:</h4>
+    <section class="example-section">
+
+        <p><mat-checkbox [checked]="pepperoni" [(ngModel)]="pepperoni">Pepperoni</mat-checkbox></p>
+        <p><mat-checkbox [checked]="extracheese" [(ngModel)]="extracheese">Extra Cheese</mat-checkbox></p>
+        <p><mat-checkbox [checked]="mushroom" [(ngModel)]="mushroom">Mushroom</mat-checkbox></p>
+
+
+    </section>
+
+    <p [hidden]="!pepperoni">Pepperoni </p>
+    <p [hidden]="!extracheese">Extra Cheese </p>
+    <p [hidden]="!mushroom">Mushroom </p>
+</mat-expansion-panel>-->
+
+
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Columns Shown
+        </mat-panel-title>
+        <mat-panel-description>
+            showing selected columns
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <h4>Select Columns:</h4>
+
+    <section class="groups">
+        <div>
+            <tr>
+                <td><mat-checkbox [checked]="source" [(ngModel)]="source">Source</mat-checkbox></td>
+                <td><mat-checkbox [checked]="demandStatus" [(ngModel)]="demandStatus">Demand status</mat-checkbox></td>
+                <td><mat-checkbox [checked]="teamRequestId" [(ngModel)]="teamRequestId">Team Request Id</mat-checkbox></td>
+                <td><mat-checkbox [checked]="positionId" [(ngModel)]="positionId">Position Id</mat-checkbox></td>
+            </tr>
+        </div>
+
+    </section>
+</mat-expansion-panel>
