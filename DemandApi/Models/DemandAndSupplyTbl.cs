@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DemandApi.Models;
 
@@ -10,7 +11,7 @@ public partial class DemandAndSupplyTbl
 
     public string? TeamRequestId { get; set; }
 
-    public string? PositionId { get; set; }
+    public string PositionId { get; set; } = null!;
 
     public string? RecruitingId { get; set; }
 
@@ -23,7 +24,6 @@ public partial class DemandAndSupplyTbl
     public string? Client { get; set; }
 
     public string? DemandType { get; set; }
-
 
     public string? ProjectCode { get; set; }
 
@@ -198,4 +198,6 @@ public partial class DemandAndSupplyTbl
     public bool LeadMarketAndPracticeAreaSame { get; set; }
 
     public string? ForecastType { get; set; }
+
+    public virtual ICollection<Resume> Resumes { get; set; } = new List<Resume>();
 }

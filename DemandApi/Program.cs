@@ -1,6 +1,5 @@
 using DemandApi.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +14,8 @@ builder.Services.AddDbContext<DemandAndSupplyDbContext>(options=>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("connect"));
 });
 
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddCors();
 

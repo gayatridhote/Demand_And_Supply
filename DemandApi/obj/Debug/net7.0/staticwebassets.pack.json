@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10183314\\10183314AWS Certified Cloud Practitioner.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10183314\\10183314AWS Certified Cloud Practitioner.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10183314\\10183314Gayatri-Dhote AZ-900.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10183314\\10183314Gayatri-Dhote AZ-900.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10483193\\10483193AWS Certified Cloud Practitioner certificate.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10483193\\10483193AWS Certified Cloud Practitioner certificate.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10483193\\10483193AWS Certified Cloud Practitioner.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10483193\\10483193AWS Certified Cloud Practitioner.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10483193\\10483193Gayatri-Dhote AZ-900.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10483193\\10483193Gayatri-Dhote AZ-900.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\10483193\\10483193Screenshot 2023-05-10 114402.png",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\10483193\\10483193Screenshot 2023-05-10 114402.png"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\11799026\\11799026Gayatri-Dhote AZ-104.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\11799026\\11799026Gayatri-Dhote AZ-104.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\11997226\\11997226Gayatri-Dhote AZ-104.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\11997226\\11997226Gayatri-Dhote AZ-104.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12049757\\12049757Gayatri-Dhote AZ-104.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12049757\\12049757Gayatri-Dhote AZ-104.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12134784\\12134784Gayatri-Dhote AZ-104.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12134784\\12134784Gayatri-Dhote AZ-104.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12134784\\12134784r2d2 104.png",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12134784\\12134784r2d2 104.png"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12547156\\12547156AWS Certified Cloud Practitioner.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12547156\\12547156AWS Certified Cloud Practitioner.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12591510\\12591510Gayatri-Dhote AZ-900.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12591510\\12591510Gayatri-Dhote AZ-900.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\12627537\\12627537r2d2 104.png",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\12627537\\12627537r2d2 104.png"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\undefined\\undefinedAWS Certified Cloud Practitioner.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\undefined\\undefinedAWS Certified Cloud Practitioner.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\undefined\\undefinedGayatri-Dhote AZ-104.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\undefined\\undefinedGayatri-Dhote AZ-104.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\undefined\\undefinedGayatri-Dhote AZ-900.pdf",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\undefined\\undefinedGayatri-Dhote AZ-900.pdf"
+    },
+    {
+      "Id": "C:\\Users\\GDHOTE\\Desktop\\Demand_And_Supply\\DemandApi\\wwwroot\\Uploads\\Resumes\\undefined\\undefinedr2d2 104.png",
+      "PackagePath": "staticwebassets\\Uploads\\Resumes\\undefined\\undefinedr2d2 104.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.DemandApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.DemandApi.props",
+      "PackagePath": "build\\DemandApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.DemandApi.props",
+      "PackagePath": "buildMultiTargeting\\DemandApi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.DemandApi.props",
+      "PackagePath": "buildTransitive\\DemandApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

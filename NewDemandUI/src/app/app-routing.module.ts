@@ -9,9 +9,9 @@ import { UserDisplayComponent } from './user-display/user-display.component';
 
 const routes: Routes = [
   { path: 'userDisplay', component: UserDisplayComponent },
-  //{ path: 'hideShowColm', component: HideShowColmComponent},
+  { path: 'hideShowColm', component: HideShowColmComponent},
   //{ path: 'reusableTable', component: ReusableTableComponent},
-  { path: 'userDisplay/apply', component: ApplyHereComponent} ///:id
+  { path: 'userDisplay/apply/:id', component: ApplyHereComponent} ///:id
 
 ];
 

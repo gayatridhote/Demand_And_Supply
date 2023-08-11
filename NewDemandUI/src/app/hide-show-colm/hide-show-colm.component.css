@@ -1,17 +1,16 @@
-.select_columns{
-    width: 100%;
-  }
-  .example-section {
-    background-color: black;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    height: 60px;
-  }
-  
-  .example-margin {
-    margin: 0 10px;
-  }
-  .h4{
-    color: rgb(241, 246, 250);
-  }
+.file-input{
+  display: none;
+}
+
+.file-upload{
+  display: flex;
+  align-items: flex-end;
+}
+
+.upLoadButton{
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.progress-bar{
+  margin-bottom: 10px;
+}

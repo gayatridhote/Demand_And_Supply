@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace DemandApi.Models;
 
@@ -15,18 +17,21 @@ public partial class DemandAndSupplyDbContext : DbContext
 
     public virtual DbSet<DemandAndSupplyTbl> DemandAndSupplyTbls { get; set; }
 
-   /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public virtual DbSet<Resume> Resumes { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=LIN25006697\\SQLEXPRESS;Database=DemandAndSupply_DB;Integrated Security=true;  Trusted_Connection=True;TrustServerCertificate=True ");*/
+        => optionsBuilder.UseSqlServer("Server=LIN25006697\\SQLEXPRESS;Database=DemoDemandAnsSupply;Integrated Security=true;Trusted_Connection=True;TrustServerCertificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<DemandAndSupplyTbl>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("DemandAndSupply_Tbl");
+            entity.HasKey(e => e.PositionId).HasName("PK_DemandAndSupply_Tbl");
 
+            entity.ToTable("DemandAndSupplyTbl");
+
+            entity.Property(e => e.PositionId).HasMaxLength(255);
             entity.Property(e => e.AccountGeoCity)
                 .HasMaxLength(255)
                 .HasColumnName("Account Geo City");
@@ -152,7 +157,6 @@ public partial class DemandAndSupplyDbContext : DbContext
             entity.Property(e => e.OutgoingEmployee)
                 .HasMaxLength(255)
                 .HasColumnName("Outgoing Employee");
-            entity.Property(e => e.PositionId).HasMaxLength(255);
             entity.Property(e => e.PositionName)
                 .HasMaxLength(255)
                 .HasColumnName("Position Name");
@@ -284,6 +288,16 @@ public partial class DemandAndSupplyDbContext : DbContext
             entity.Property(e => e.WeekByStatusGrouped)
                 .HasMaxLength(255)
                 .HasColumnName("Week By Status - Grouped");
+        });
+
+        modelBuilder.Entity<Resume>(entity =>
+        {
+            entity.Property(e => e.PositionId).HasMaxLength(255);
+
+            entity.HasOne(d => d.Position).WithMany(p => p.Resumes)
+                .HasForeignKey(d => d.PositionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Resumes_DemandAndSupplyTbl");
         });
 
         OnModelCreatingPartial(modelBuilder);

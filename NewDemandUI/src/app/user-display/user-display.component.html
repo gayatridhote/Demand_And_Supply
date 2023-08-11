@@ -15,6 +15,9 @@
             <section class="groups">
                 <div>
                     <tr>
+                        <td><mat-checkbox class="margin" [checked]="all" [(ngModel)]="all" (change)="onSelect()">Select All</mat-checkbox></td>
+                    </tr>
+                    <tr>
                         <td><mat-checkbox class="margin" [checked]="source" [(ngModel)]="source">Source</mat-checkbox></td>
                         <td><mat-checkbox class="margin" [checked]="demandStatus" [(ngModel)]="demandStatus">Demand status</mat-checkbox></td>
                         <td><mat-checkbox class="margin" [checked]="teamRequestId" [(ngModel)]="teamRequestId">Team Request Id</mat-checkbox></td>
@@ -697,9 +700,9 @@
                     <ng-container matColumnDef="action" stickyEnd>
                         <th mat-header-cell *matHeaderCellDef>Action</th>
                         <td mat-cell *matCellDef="let user">
-                            <a routerLink="apply"><!--,user.positionId-->
-                                <button mat-raised-button color="primary" >Apply</button>
-                            </a>
+                            <!-- <a  routerLink="apply/{{user.positionId}}"  > -->
+                                <button mat-raised-button color="primary" (click)="applyHere(user.positionId)">Apply</button> 
+                            <!-- </a> -->
                         </td>
                     </ng-container>
 

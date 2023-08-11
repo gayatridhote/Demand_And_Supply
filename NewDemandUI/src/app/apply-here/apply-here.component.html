@@ -1,1 +1,121 @@
-<p>apply-here works!</p>
+<!-- <div class="main-div">
+    <mat-card>
+        <mat-card-header>
+            <h4>Details</h4>
+        </mat-card-header>
+
+        <mat-card-content>
+            
+
+            <tr>
+                <td class="sp"><mat-label>Position Id :</mat-label></td>
+                <td>{{user.positionId}}</td>
+                <td class="sp"><mat-label>Position Name :</mat-label></td>
+                <td>{{user.positionName}}</td>
+            </tr>
+
+            <tr>
+                <td class="sp"><mat-label>Team Request Id :</mat-label></td>
+                <td>{{user.teamRequestId}}</td>
+                <td class="sp"><mat-label>Team Request Name :</mat-label></td>
+                <td>{{user.teamRequestName}}</td>
+            </tr>
+
+            <tr>
+
+                <td class="sp"><mat-label>Project Code :</mat-label></td>
+                <td>{{user.projectCode}}</td>
+                <td class="sp"><mat-label>Position Name :</mat-label></td>
+                <td>{{user.positionName}}</td>
+            </tr>
+
+            <tr>
+
+                <td class="sp"><mat-label>Requested By :</mat-label></td>
+                <td>{{user.requestedBy}}</td>
+                <td class="sp"><mat-label>PSP Handler :</mat-label></td>
+                <td>{{user.pspHandler}}</td>
+            </tr>
+
+            <tr> 
+                <td class="sp"><mat-label>Upload Resume :</mat-label></td>
+                    <td>
+                        <input required type="file" class="file-input" (change)="getFile($event)" #fileUpload>
+                        <div class="file-upload">
+    
+                            <button mat-mini-fab color="primary" class="upLoadButton" (click)="fileUpload.click()">
+                                <mat-icon>attach_file</mat-icon>
+                            </button>
+    
+                            <mat-form-field>
+                                <input matInput [disabled]="true" [value]="fileName">
+                            </mat-form-field>
+                        </div>
+                </td>
+            </tr>
+        </mat-card-content>
+
+        <mat-card-footer>
+            <div mat-dialog-actions align="center">
+                <button mat-button mat-dialog-close (click)="submit()" >Apply</button>
+            </div>
+        </mat-card-footer>
+
+        
+    </mat-card>
+</div> 
+ -->
+
+
+ <!-- <div class="main-div"> -->
+   
+         <!-- <mat-card > -->
+           <!--  <mat-card-header> -->
+                <h1 mat-dialog-title>{{inputdata.title}}</h1>
+            <!-- </mat-card-header>
+
+            <mat-card-content> -->
+                <div mat-dialog-content>
+                <h4><b>Position Id :</b> {{user.positionId}}</h4>
+                <h4><b>Position Name :</b> {{user.positionName}}</h4>
+                <h4><b>Team Request Id :</b>{{user.teamRequestId}}</h4>
+                <h4><b>Team Request Name :</b>{{user.teamRequestName}}</h4>
+                <h4><b>Project Code :</b>{{user.projectCode}}</h4>
+                <h4><b>Position Name : </b>{{user.positionName}}</h4>
+                <h4><b>Requested By : </b>{{user.requestedBy}}</h4>
+                <h4><b>PSP Handler : </b>{{user.pspHandler}}</h4>
+                <tr>
+                    <td class="sp"><mat-label>Upload Resume :</mat-label></td>
+                    <td>
+                        <input required type="file" class="file-input" (change)="getFile($event)" #fileUpload>
+                        <div class="file-upload">
+
+                            <button mat-mini-fab color="primary" class="upLoadButton" (click)="fileUpload.click()">
+                                <mat-icon>attach_file</mat-icon>
+                            </button>
+
+                            <mat-form-field>
+                                <input matInput [disabled]="true" [value]="fileName">
+                            </mat-form-field>
+                        </div>
+                    </td>
+                </tr>
+            </div>
+            <!-- </mat-card-content>
+
+            <mat-card-footer> -->
+                
+                <div mat-dialog-actions align="center">
+                    <button mat-button mat-dialog-close (click)="submit()">Apply</button>
+                <!-- </div>
+                <div mat-dialog-actions align="center"> -->
+                    <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+
+                </div>
+            
+            <!-- </mat-card-footer>-->
+
+
+        <!-- </mat-card>  -->
+     
+<!-- </div>  -->
